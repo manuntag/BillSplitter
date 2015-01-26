@@ -7,8 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "SplitCalculator.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) IBOutlet UITextField *amountTextField;
+@property (strong, nonatomic) IBOutlet UILabel *splitAmountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numberOfGuestsLabel;
+@property (strong, nonatomic) IBOutlet UISlider *numberOfGuestsSlider;
+
+@property (strong, nonatomic) SplitCalculator * splitCalculator;
 
 @end
 
@@ -16,12 +24,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    self.splitCalculator = [[SplitCalculator alloc]init];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    
+    [self.amountTextField resignFirstResponder];
+    
 }
+
+- (IBAction)valueChangedSlider:(id)sender {
+
+    int roundedValue = self.numberOfGuestsSlider.value;
+    
+    self.numberOfGuestsLabel.text = [NSString stringWithFormat:@"%d Guests",roundedValue];
+
+}
+
+
+- (IBAction)calculateButton:(id)sender {
+    
+    self.splitCalculator.billAmount = [self.amountTextField.text  floatValue];
+    self.splitCalculator.numberOfPeople = self.numberOfGuestsSlider.value;
+    
+    self.splitCalculator.splitAmount = [self.splitCalculator calculateSplit:self.splitCalculator.billAmount withNumberOfPeople:self.splitCalculator.numberOfPeople];
+    
+    self.splitAmountLabel.text = [NSString stringWithFormat:@"$%.2f",self.splitCalculator.splitAmount];
+    
+    [self.amountTextField resignFirstResponder];
+    
+}
+
 
 @end

@@ -14,6 +14,7 @@
 		8A06F9F71A76C7A500F33809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A06F9F61A76C7A500F33809 /* Images.xcassets */; };
 		8A06F9FA1A76C7A500F33809 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A06F9F81A76C7A500F33809 /* LaunchScreen.xib */; };
 		8A06FA061A76C7A500F33809 /* BillSplitterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A06FA051A76C7A500F33809 /* BillSplitterTests.m */; };
+		8A06FA111A76CB7200F33809 /* SplitCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A06FA101A76CB7200F33809 /* SplitCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8A06F9FF1A76C7A500F33809 /* BillSplitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillSplitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A06FA041A76C7A500F33809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A06FA051A76C7A500F33809 /* BillSplitterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillSplitterTests.m; sourceTree = "<group>"; };
+		8A06FA0F1A76CB7200F33809 /* SplitCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitCalculator.h; sourceTree = "<group>"; };
+		8A06FA101A76CB7200F33809 /* SplitCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +84,11 @@
 		8A06F9E81A76C7A500F33809 /* BillSplitter */ = {
 			isa = PBXGroup;
 			children = (
-				8A06F9ED1A76C7A500F33809 /* AppDelegate.h */,
-				8A06F9EE1A76C7A500F33809 /* AppDelegate.m */,
+				8A06FA0F1A76CB7200F33809 /* SplitCalculator.h */,
+				8A06FA101A76CB7200F33809 /* SplitCalculator.m */,
 				8A06F9F01A76C7A500F33809 /* ViewController.h */,
 				8A06F9F11A76C7A500F33809 /* ViewController.m */,
 				8A06F9F31A76C7A500F33809 /* Main.storyboard */,
-				8A06F9F61A76C7A500F33809 /* Images.xcassets */,
-				8A06F9F81A76C7A500F33809 /* LaunchScreen.xib */,
 				8A06F9E91A76C7A500F33809 /* Supporting Files */,
 			);
 			path = BillSplitter;
@@ -96,6 +97,10 @@
 		8A06F9E91A76C7A500F33809 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8A06F9F61A76C7A500F33809 /* Images.xcassets */,
+				8A06F9F81A76C7A500F33809 /* LaunchScreen.xib */,
+				8A06F9ED1A76C7A500F33809 /* AppDelegate.h */,
+				8A06F9EE1A76C7A500F33809 /* AppDelegate.m */,
 				8A06F9EA1A76C7A500F33809 /* Info.plist */,
 				8A06F9EB1A76C7A500F33809 /* main.m */,
 			);
@@ -221,6 +226,7 @@
 			files = (
 				8A06F9F21A76C7A500F33809 /* ViewController.m in Sources */,
 				8A06F9EF1A76C7A500F33809 /* AppDelegate.m in Sources */,
+				8A06FA111A76CB7200F33809 /* SplitCalculator.m in Sources */,
 				8A06F9EC1A76C7A500F33809 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
